@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amiya 官网</title>
+    <style>
+        #container {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            top: 20%;
+        }
+        #title, #subtitle, #tip {
+            text-align: center;
+            padding: 7px;
+        }
+        #title {
+            font-size: 2.25em;
+        }
+        #subtitle, #tip {
+            font-size: 1.75em;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="title">
+            <strong>今天是南京大屠杀死难者国家公祭日，Amiya 官网停止服务一天</strong>
+        </div>
+        <div id="subtitle">
+            <strong>勿忘国耻，吾辈自强！</strong>
+        </div>
+        <div id="tip">
+            跳转还剩 {{counter}} 秒...
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3.2.26/dist/vue.global.js"></script>
+    <script>
+        const Counter = {
+            data() {
+              return {
+                counter: 5
+              }
+            },
+            mounted() {
+                let interval = setInterval(() => {
+                  if(this.counter == 1) {
+                    clearInterval(interval)
+                    window.location.href = "https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%B1%A0%E6%9D%80/26188"
+                  }
+                  this.counter--
+                }, 1000)
+            }
+          }
+        Vue.createApp(Counter).mount('#tip')
+    </script>
+</body>
+</html>
