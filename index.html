@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你访问的页面停止服务</title>
+    <title>Amiya 官网</title>
+    <link rel="shortcut icon" href="./amiya.ico" type="image/x-icon">
     <style>
         #container {
             position: absolute;
@@ -32,29 +33,21 @@
         <div id="subtitle">
             <strong>勿忘国耻，吾辈自强！</strong>
         </div>
-        <div id="tip">
-            跳转还剩 {{counter}} 秒...
-        </div>
+        <div id="tip"></div>
     </div>
-    <script src="https://unpkg.com/vue@3.2.26/dist/vue.global.prod.js"></script>
     <script>
-        const Counter = {
-            data() {
-              return {
-                counter: 5
-              }
-            },
-            mounted() {
-                let interval = setInterval(() => {
-                  if(this.counter == 1) {
-                    clearInterval(interval)
-                    window.location.href = "https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%B1%A0%E6%9D%80/26188"
-                  }
-                  this.counter--
-                }, 1000)
+        var s = 6;
+        function countTime() {
+            if(s > 0) {
+                s--;
+            } 
+            else {
+                window.location.href = "https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%B1%A0%E6%9D%80/26188"
             }
-          }
-        Vue.createApp(Counter).mount('#tip')
+            document.getElementById("tip").innerHTML = "跳转还剩" + s + "秒...";
+            setTimeout(countTime, 1000);
+        }
+        countTime();
     </script>
 </body>
 </html>
