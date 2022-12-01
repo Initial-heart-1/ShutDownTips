@@ -8,32 +8,46 @@
     <link rel="shortcut icon" href="./amiya.ico" type="image/x-icon">
     <style>
         #container,#title, #subtitle, #tip{
-            font-family:"HarmonyOS Sans SC","微软雅黑","Microsoft YaHei UI",fangsong;
+            font-family:"PingFang SC", "HarmonyOS Sans SC","Lantinghei SC", "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", 微软雅黑, STHeitiSC-Light, simsun, 宋体, "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", sans-serif;
          }
         #container {
             position: absolute;
             width: 100%;
-            top: 20%;
         }
         #title, #subtitle, #tip {
             text-align: center;
             padding: 7px;
         }
         #title {
-            font-size: 2.25em;
+            font-size: 2em;
         }
         #subtitle, #tip {
-            font-size: 1.75em;
+            font-size: 1.5em;
+        }
+        #img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        html {
+            filter: grayscale(100%);
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
         }
     </style>
 </head>
 <body>
     <div id="container">
+        <div id="img">
+        <img decoding="async" src="JiangZeMinTongZhiYiXiang.jpg" alt="江泽民同志遗像 新华社发" width="300" height="417.5">
+        </div>
         <div id="title">
-            <strong>今天是南京大屠杀死难者国家公祭日，Amiya 官网暂停服务一天</strong>
+            <strong>沉    痛    悼    念</strong>
         </div>
         <div id="subtitle">
-            <strong>勿忘国耻，吾辈自强！</strong>
+            <strong>江泽民同志因病在上海逝世</strong>
         </div>
         <div id="tip"></div>
     </div>
@@ -44,9 +58,9 @@
                 s--;
             } 
             else {
-                window.location.href = "https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%B1%A0%E6%9D%80/26188"
+                window.location.href = "http://www.news.cn/politics/2022-11/30/c_1129174030.htm"
             }
-            document.getElementById("tip").innerHTML = "即将跳转至相关资料页 跳转还剩 " + s + " 秒...";
+            document.getElementById("tip").innerHTML = "即将跳转至新华网《告全党全军全国各族人民书》 跳转还剩 " + s + " 秒...";
             setTimeout(countTime, 1000);
         }
         countTime();
