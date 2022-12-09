@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你访问的页面暂停服务</title>
+    <title>你的访问被拒绝</title>
     <link rel="shortcut icon" href="./amiya.ico" type="image/x-icon">
     <style>
         html{
@@ -24,30 +24,16 @@
         #subtitle, #tip {
             font-size: 1.5em;
         }
-        #img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        html {
-            filter: grayscale(100%);
-            -webkit-filter: grayscale(100%);
-            -moz-filter: grayscale(100%);
-            -ms-filter: grayscale(100%);
-            -o-filter: grayscale(100%);
-        }
     </style>
 </head>
 <body>
     <div id="container">
-        <div id="img">
-        <img decoding="async" src="https://news.yunnan.cn/pic/003/051/326/00305132646_526f3521.jpg" alt="江泽民同志遗像 新华社发" width="300" height="417.5">
-        </div>
         <div id="title">
-            <strong>沉    痛    悼    念</strong>
+            <strong>很抱歉，AmiyaV5 官网已不提供服务。</strong>
         </div>
         <div id="subtitle">
-            <strong>江泽民同志因病在上海逝世</strong>
+            因项目组已放弃对 V5 版本的维护，V5 版本的官网相应的停止提供服务。<br\>
+            在有新的计划前，AmiyaV5 官网将跳转至 V6 框架官网。
         </div>
         <div id="tip"></div>
     </div>
@@ -58,9 +44,9 @@
                 s--;
             } 
             else {
-                window.location.href = "http://www.news.cn/politics/2022-11/30/c_1129174030.htm"
+                window.location.href = "https://www.amiyabot.com/"
             }
-            document.getElementById("tip").innerHTML = "即将跳转至《告全党全军全国各族人民书》 跳转还剩 " + s + " 秒...";
+            document.getElementById("tip").innerHTML = "即将跳转至 AmiyaV6 框架官网 跳转还剩 " + s + " 秒...";
             setTimeout(countTime, 1000);
         }
         countTime();
